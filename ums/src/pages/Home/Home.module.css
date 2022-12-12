@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userCard input:not([type='checkbox']) {
+    width: 100%;
+}
+
+.userCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgb(128, 128, 128, 0.3);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+
+.buttonz{
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.editButtonText {
+    background-color: rgb(16, 145, 33);
+}
+
+.cancelButtonText {
+    background-color: rgb(231, 25, 25);
+}
+
+.showPassword{
+    display: flex;
+    font-size: medium;
+    cursor: pointer;
+    gap: 5px;
+}

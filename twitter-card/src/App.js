@@ -1,0 +1,9 @@
+import { Root } from './components/Root/Root';
+
+function App() {
+  return (
+    <Root />
+  );
+}
+
+export default App;

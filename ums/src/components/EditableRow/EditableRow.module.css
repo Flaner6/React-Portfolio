@@ -1,0 +1,30 @@
+.saveButton{
+    background-color: rgb(236, 217, 46);
+}
+
+.saveButton:hover{
+    background-color: rgba(236, 217, 46, 0.3);
+}
+
+.cancelButton{
+    background-color: red;
+}
+
+.cancelButton:hover{
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.usersTable input{
+    width: 8vw;
+}
+
+
+.ageInput {
+    width: 6vw;
+}
+
+.editButtonsDiv{
+    display: flex;
+    justify-content: space-between;
+
+}

@@ -1,0 +1,26 @@
+{
+  "name": "mpalotis-portfolio",
+  "version": "1.0.0",
+  "homepage": ".",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:twitter": "cd twitter-card && npm install && npm run build && cd ..",
+    "build:ums": "cd ums && npm install && npm run build && cd ..",
+    "build-future": "npm run build:twitter && npm run build:ums && node build.js",
+    "build": "npm run build:twitter && npm run build:ums && node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xristos1994/mpalotis-external-coaching.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xristos1994/mpalotis-external-coaching/issues"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  }
+}

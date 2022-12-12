@@ -1,0 +1,141 @@
+.circle {
+  position: absolute;
+  border: 1px solid black;
+  padding: 0;
+  margin: 1em auto;
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  
+}
+
+.innercircle {
+  position: absolute;
+  border: 1px solid black;
+  padding: 0;
+  width: 13em;
+  height: 13em;
+  border-radius: 50%;
+  background-image:
+  linear-gradient(18deg, white 100%, transparent 50%)
+}
+
+.wheel {
+  justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 31.25em;
+
+}
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform:rotate(360deg);
+  }
+}
+
+.rotate {
+  -webkit-animation:spin 6s ease-in-out 1;
+  -moz-animation:spin 6s ease-in-out 1;
+  animation:spin 6s ease-in-out 1;
+}
+
+.ball {
+  border: 1px solid black;
+  background-color: rgb(226, 226, 226);
+  color: black;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.movingBall {
+  border: 1px solid black;
+  background-color: rgb(226, 226, 226);
+  color: black;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  z-index: 100;
+
+  /* 
+   * Make the initial position to be the center of the circle you want this
+   * object follow.
+   */
+   
+  position: absolute; 
+  left: calc(50% - 0.4em);
+  top: calc(50% - 0.4em);
+
+  /*
+   * Sets up the animation duration, timing-function (or easing)
+   * and iteration-count. Ensure you use the appropriate vendor-specific 
+   * prefixes as well as the official syntax for now. Remember, tools like 
+   * CSS Please are your friends!
+   */
+  -webkit-animation: myOrbit 6s ease-in-out 1; /* Chrome, Safari 5 */
+     -moz-animation: myOrbit 6s ease-in-out 1; /* Firefox 5-15 */
+       -o-animation: myOrbit 6s ease-in-out 1; /* Opera 12+ */
+          animation: myOrbit 6s ease-in-out 1; /* Chrome, Firefox 16+, 
+                                                    IE 10+, Safari 5 */
+
+}
+
+/*
+* Set up the keyframes to actually describe the begining and end states of 
+* the animation.  The browser will interpolate all the frames between these 
+* points.  Again, remember your vendor-specific prefixes for now!
+*/
+@-webkit-keyframes myOrbit {
+  from { -webkit-transform: rotate(360deg) translateX(10em); }
+  to   { -webkit-transform: rotate(-360deg) translateX(10em); }
+}
+
+@-moz-keyframes myOrbit {
+  from { -moz-transform: rotate(360deg) translateX(10em); }
+  to   { -moz-transform: rotate(-360deg) translateX(10em); }
+}
+
+@-o-keyframes myOrbit {
+  from { -o-transform: rotate(360deg) translateX(10em); }
+  to   { -o-transform: rotate(-360deg) translateX(10em); }
+}
+
+@keyframes myOrbit {
+  from { transform: rotate(360deg) translateX(10em) ; }
+  to   { transform: rotate(-360deg) translateX(10em); }
+}
+
+
+.circle li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  border: solid;
+  border-color: rgb(122, 88, 13);
+  transform-origin: 0% 100%;
+}
+.text {
+  transform: skewY(80deg);
+  position: absolute;
+  bottom: 11em;
+  width: 0;
+  margin-left: 0.625em;
+  margin-bottom: -3.125em;
+}

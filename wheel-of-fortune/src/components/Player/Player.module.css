@@ -1,0 +1,31 @@
+.playerCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonWrapper{
+    margin: 1em;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.playerButton {
+
+    background-color: rgb(195, 166, 228);
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
