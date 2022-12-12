@@ -1,5 +1,5 @@
 import { combineEpics, ofType } from 'redux-observable';
-import { mergeMap, map, withLatestFrom, delay } from 'rxjs';
+import { mergeMap, withLatestFrom, delay } from 'rxjs';
 import { roundStates } from '../../config/roundStates';
 import { spinResults } from '../../utils/rouletteSpin';
 import { placeBet, setFunds, setBet, startRound, setRoundState, resolveRound, setAllBets, changeBetAmount, reset, setWinnerNumber, setEarnings } from './actions';
