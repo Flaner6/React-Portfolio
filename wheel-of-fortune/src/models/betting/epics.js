@@ -57,8 +57,11 @@ const placeBetEpic = (action$, state$) => {
       ofType(reset.type),
       withLatestFrom($state),
       mergeMap(([,state]) => {
+        const cancledBets = Object.values(bets(state)).reduce((sum, element)=>{
+          return sum + element;
+        },0);
        return [
-        setFunds(funds(state)),
+        setFunds(funds(state) + cancledBets),
         setAllBets({}),
         changeBetAmount(1)
        ];
