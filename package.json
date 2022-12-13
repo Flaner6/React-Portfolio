@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:twitter": "cd twitter-card && npm install && npm run build && cd ..",
     "build:ums": "cd ums && npm install && npm run build && cd ..",
+    "build:wheel-of-fortune": "cd wheel-of-fortune && npm install && npm run build && cd ..",
     "build-future": "npm run build:twitter && npm run build:ums && node build.js",
-    "build": "npm run build:twitter && npm run build:ums && node build.js"
+    "build": "npm run build:twitter && npm run build:ums && npm run build:wheel-of-fortune && node build.js"
   },
   "repository": {
     "type": "git",
